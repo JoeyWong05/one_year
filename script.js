@@ -199,21 +199,18 @@ function showSurprise(day, message, prize) {
     modalDay.textContent = day === 0 ? "Welcome" : day;
     passwordSection.classList.add('hidden');
     surpriseSection.classList.remove('hidden');
-    const imageUrl = CONFIG.dailyPrizeImages[day];
-    const dateText = CONFIG.dailyPrizeDates[day];
-    let imageHtml = `<div class='prize-image-box'><img src='${imageUrl}' alt='Prize Image' class='prize-image'/></div>`;
-    let dateHtml = `<div class='prize-date-box'><i class=\"fas fa-calendar-alt\"></i> <span>${dateText}</span></div>`;
+    
     if (day === 0) {
         dayMessage.innerHTML = message + '<br><br><a href="#" onclick="generateFlowers()" style="color: #e91e63; text-decoration: underline;">🌹 Generate Flowers Here</a>';
-        // Only show the prize text and claim button for Day 0
-        dayPrize.innerHTML = `<div class='prize-text'>${prize}</div>`;
     } else if (day === 7) {
         dayMessage.innerHTML = message + '<br><br><div class="destination-picker"><h4>Choose Your Adventure:</h4><div class="destination-buttons"><button onclick="selectDestination(\'hongkong\')" class="destination-btn">🇭🇰 Hong Kong</button><button onclick="selectDestination(\'bali\')" class="destination-btn">🇮🇩 Bali, Indonesia</button></div></div>';
-        dayPrize.innerHTML = `${imageHtml}<div class='prize-text'>${prize}</div>${dateHtml}`;
     } else {
         dayMessage.textContent = message;
-        dayPrize.innerHTML = `${imageHtml}<div class='prize-text'>${prize}</div>${dateHtml}`;
     }
+    
+    // Only show the prize text for all days
+    dayPrize.innerHTML = `<div class='prize-text'>${prize}</div>`;
+    
     boxModal.classList.remove('hidden');
 }
 
