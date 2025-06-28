@@ -13,9 +13,9 @@ const CONFIG = {
     dailyMessages: {
         0: "Shayla! You found the secret site! I know you mention that I never give you flowers but here is a bouquet of 365 roses (that will hopefully last you through the next year). Or if you are ever in need of flowers, but I do not have any, you can generate it here (there should be a link. If there isn't, it prob means im too busy / lazy to code it but i will code it in the future LOL)",
         1: "Shayla! This past year, I've grown really close to you! Every time I'm with u, I feel very warm and fuzzy inside :D! And I know that we r both very much homebody people, so i find it fitting that I get you this blanket jacket to kick off the one week long celebration! Hope you enjoy!",
-        2: "안녕하세요 jjkluverr. Your obsession with BTS is lowkey weird as fuck but I don't judge. For Day 2, I find it fitting that your daily prizes are paid tickets to BTS's upcoming comeback concert AND NEW AIRPODS SO THAT U CAN LISTEN TO MORE BTS! ENJOYYYYY",
+        2: "안녕하세요 jjkluverr. Your obsession with BTS is lowkey weird as fuck but I don't judge. For Day 2, I find it fitting that your daily prizes are NEW AIRPODS PRO SO THAT U CAN LISTEN TO MORE BTS! ENJOYYYYY",
         3: "WELCOME BACK MY ABG. I KNOW THAT YOURE A CHRONIC RAVER (WEIRD). ALSO IM TYPING THIS ENTIRE MESSAGE IN ALL CAPS JUST CUZ I CAN HAHA. ANYWAY, FOR TODAY, YOU GET 3 NEW RAVE OUTFITS (WHATEVER THAT MEANS). AND MAYBE U CAN WEAR THEM FOR ME NEXT TIME ;)",
-        4: "welcome to the halfway mark my younging. Weird that you only put one item in your wishlist.. Bro prob thinks im broke. But heres that one item that u asked for for day 4. Enjoy",
+        4: "welcome to the halfway mark my younging. Weird that you only put one item in your wishlist. But heres that one item that u asked for for day 4. Enjoy",
         5: "2 MORE DAYS UNTIL THE GRAND FINALEEE WOAHHH. For today, ill keep it light and hearty. I know youre obsessed with ur skincare product and you always want that glass skin look. So heres some skincare product! See u tmrwww",
         6: "tmrw is the big day! For today, you only get clothes. See u trmw!",
         7: "Welcome back to the last day, Shayla! From the very moment I laid eyes on you while I was walking to the library during freshman year, I thought \"dayummmm she bad af. Let me hit.\" (jk). I've grown so much this past year with you, and we've gone so far together. I know I wasn't the best bf in the beginning, but I've truly tried to do better and be better for you. Shayla, you mean the world to me. And I couldn't imagine a world without you. So, to my beautiful shayla, for day 7 (and the last day), I find it fitting that we travel the world together….to explore whats out there beyond Berkeley. But, you get to pick:"
@@ -23,9 +23,9 @@ const CONFIG = {
     dailyPrizes: {
         0: "🌹 Bouquet of 365 Roses",
         1: "🎬 Movie Night Date (Squid Game Season 3 + KPOP DEMON HUNTER + Cookie Baking) + Blanket Jacket",
-        2: "🎫 BTS Concert Tickets + New AirPods",
+        2: "🎫 New AirPods",
         3: "👗 3 New Rave Outfits",
-        4: "🐠 Aquarium/Sushi Date + Your Wishlist Item",
+        4: "🐠 Sushi-At-Home + Your Wishlist Item",
         5: "🧴 Skincare Products",
         6: "👕 New Clothes",
         7: "✈️ World Travel Adventure + FOGO"
