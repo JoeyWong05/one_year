@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy One Year, My Love! 💕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-container">
+            <div class="heart-animation">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h1>Welcome to Our Special Place</h1>
+            <p>Enter the password to unlock our journey together</p>
+            <div class="password-input">
+                <input type="password" id="mainPassword" placeholder="Enter password...">
+                <button onclick="checkMainPassword()">
+                    <i class="fas fa-unlock"></i>
+                </button>
+            </div>
+            <div id="passwordError" class="error-message"></div>
+        </div>
+    </div>
+
+    <!-- Main Website -->
+    <div id="mainWebsite" class="main-website hidden">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">Happy One Year, My Love! 💕</h1>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cartCount" class="cart-count">0</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Shopping Cart -->
+        <div id="shoppingCart" class="shopping-cart hidden">
+            <div class="cart-header">
+                <h3>Your Prizes Collection 💝</h3>
+                <button onclick="toggleCart()" class="close-cart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="cartItems" class="cart-items">
+                <!-- Prizes will be added here -->
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="welcome-message">
+                <h2>Welcome to our special journey together! 🌹</h2>
+                <p>Each day brings a new surprise waiting to be discovered...</p>
+            </div>
+
+            <!-- Mystery Boxes Grid -->
+            <div class="mystery-boxes">
+                <div class="box" data-day="0" onclick="openBox(0)">
+                    <div class="box-content">
+                        <i class="fas fa-rose"></i>
+                        <span>Welcome</span>
+                    </div>
+                </div>
+                <div class="box" data-day="1" onclick="openBox(1)">
+                    <div class="box-content">
+                        <i class="fas fa-gift"></i>
+                        <span>Day 1</span>
+                    </div>
+                </div>
+                <div class="box" data-day="2" onclick="openBox(2)">
+                    <div class="box-content">
+                        <i class="fas fa-gift"></i>
+                        <span>Day 2</span>
+                    </div>
+                </div>
+                <div class="box" data-day="3" onclick="openBox(3)">
+                    <div class="box-content">
+                        <i class="fas fa-gift"></i>
+                        <span>Day 3</span>
+                    </div>
+                </div>
+                <div class="box" data-day="4" onclick="openBox(4)">
+                    <div class="box-content">
+                        <i class="fas fa-gift"></i>
+                        <span>Day 4</span>
+                    </div>
+                </div>
+                <div class="box" data-day="5" onclick="openBox(5)">
+                    <div class="box-content">
+                        <i class="fas fa-gift"></i>
+                        <span>Day 5</span>
+                    </div>
+                </div>
+                <div class="box" data-day="6" onclick="openBox(6)">
+                    <div class="box-content">
+                        <i class="fas fa-gift"></i>
+                        <span>Day 6</span>
+                    </div>
+                </div>
+                <div class="box" data-day="7" onclick="openBox(7)">
+                    <div class="box-content">
+                        <i class="fas fa-gift"></i>
+                        <span>Day 7</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Box Modal -->
+        <div id="boxModal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modalTitle">Day <span id="modalDay"></span> Surprise</h3>
+                    <button onclick="closeModal()" class="close-modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="passwordSection" class="password-section">
+                        <p>Enter today's special password to unlock your surprise:</p>
+                        <div class="password-input">
+                            <input type="password" id="dayPassword" placeholder="Enter password...">
+                            <button onclick="checkDayPassword()">
+                                <i class="fas fa-unlock"></i>
+                            </button>
+                        </div>
+                        <div id="dayPasswordError" class="error-message"></div>
+                    </div>
+                    <div id="surpriseSection" class="surprise-section hidden">
+                        <div class="message-container">
+                            <h4>💌 A Message for You</h4>
+                            <p id="dayMessage"></p>
+                        </div>
+                        <div class="prize-container">
+                            <h4>🎁 Your Prize</h4>
+                            <div id="dayPrize" class="prize-display"></div>
+                            <button id="claimButton" onclick="claimPrize()" class="claim-button">
+                                Claim Prize
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Confetti Container -->
+        <div id="confettiContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
