@@ -3,7 +3,7 @@ const CONFIG = {
     dailyPasswords: {
         0: "flowers", 
         1: "blanket",
-        2: "BTS", 
+        2: "bts", 
         3: "outfit",
         4: "sushi",
         5: "skincare",
@@ -28,7 +28,7 @@ const CONFIG = {
         4: "🐠 Aquarium/Sushi Date + Your Wishlist Item",
         5: "🧴 Skincare Products",
         6: "👕 New Clothes",
-        7: "✈️ World Travel Adventure + Michelin Star Restaurant"
+        7: "✈️ World Travel Adventure + FOGO"
     },
     dailyPrizeImages: {
         0: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80", // Roses
@@ -199,20 +199,21 @@ function showSurprise(day, message, prize) {
     modalDay.textContent = day === 0 ? "Welcome" : day;
     passwordSection.classList.add('hidden');
     surpriseSection.classList.remove('hidden');
-    // Prize image
     const imageUrl = CONFIG.dailyPrizeImages[day];
     const dateText = CONFIG.dailyPrizeDates[day];
     let imageHtml = `<div class='prize-image-box'><img src='${imageUrl}' alt='Prize Image' class='prize-image'/></div>`;
-    let dateHtml = `<div class='prize-date-box'><i class="fas fa-calendar-alt"></i> <span>${dateText}</span></div>`;
+    let dateHtml = `<div class='prize-date-box'><i class=\"fas fa-calendar-alt\"></i> <span>${dateText}</span></div>`;
     if (day === 0) {
         dayMessage.innerHTML = message + '<br><br><a href="#" onclick="generateFlowers()" style="color: #e91e63; text-decoration: underline;">🌹 Generate Flowers Here</a>';
+        // Only show the prize text and claim button for Day 0
+        dayPrize.innerHTML = `<div class='prize-text'>${prize}</div>`;
     } else if (day === 7) {
         dayMessage.innerHTML = message + '<br><br><div class="destination-picker"><h4>Choose Your Adventure:</h4><div class="destination-buttons"><button onclick="selectDestination(\'hongkong\')" class="destination-btn">🇭🇰 Hong Kong</button><button onclick="selectDestination(\'bali\')" class="destination-btn">🇮🇩 Bali, Indonesia</button></div></div>';
+        dayPrize.innerHTML = `${imageHtml}<div class='prize-text'>${prize}</div>${dateHtml}`;
     } else {
         dayMessage.textContent = message;
+        dayPrize.innerHTML = `${imageHtml}<div class='prize-text'>${prize}</div>${dateHtml}`;
     }
-    // Show image above, then prize, then date (all outside the colored box)
-    dayPrize.innerHTML = `${imageHtml}<div class='prize-text'>${prize}</div>${dateHtml}`;
     boxModal.classList.remove('hidden');
 }
 
