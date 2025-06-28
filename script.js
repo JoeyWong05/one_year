@@ -1,8 +1,7 @@
-// Configuration - You can customize these passwords and messages
 const CONFIG = {
-    mainPassword: "jungkook", // Change this to your desired main password
+    mainPassword: "jungkook", 
     dailyPasswords: {
-        0: "flowers", // Day 0 - Flowers (automatic on first visit)
+        0: "flowers", 
         1: "blanket",
         2: "BTS", 
         3: "outfit",
